@@ -80,7 +80,7 @@ data LValue =
   -- |A typed literal value consisting of the literal value and
   -- the URI of the datatype of the value, respectively.
   | TypedL !T.Text  !T.Text
-    deriving (Generic,Show)
+    deriving (Generic,Show, Read)
 
 instance Binary LValue
 
@@ -131,7 +131,7 @@ data Node =
   -- <http://www.w3.org/TR/rdf-concepts/#section-Graph-Literal> for more
   -- information.
   | LNode !LValue
-    deriving (Generic,Show)
+    deriving (Generic,Show, Read)
 
 instance Binary Node
 
@@ -249,7 +249,7 @@ lnode = LNode
 -- See <http://www.w3.org/TR/rdf-concepts/#section-triples> for
 -- more information.
 data Triple = Triple !Node !Node !Node
-            deriving (Generic,Show)
+            deriving (Generic,Show, Read)
 
 instance Binary Triple
 

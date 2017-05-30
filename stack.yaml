@@ -1,8 +1,5 @@
-resolver: lts-7.9
+flags: {}
 packages:
 - '.'
-extra-deps:
-- hgal-2.0.0.2
-flags:
-  rdf4h:
-    network-uri: true
+extra-deps: []
+resolver: lts-8.15
