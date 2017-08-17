@@ -1,5 +1,6 @@
 flags: {}
 packages:
 - '.'
-extra-deps: []
-resolver: lts-8.15
+extra-deps:
+- hgal-2.0.0.2
+resolver: lts-9.1
